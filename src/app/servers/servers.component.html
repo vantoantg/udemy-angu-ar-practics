@@ -1,7 +1,7 @@
 <label>Server Name</label>
 <input
-type="text" class="form-control"
-(input)="onUpdateServerName($event)">
+  type="text" class="form-control"
+  (input)="onUpdateServerName($event)">
 
 <!--<input
   type="text" class="form-control"
@@ -14,9 +14,10 @@ type="text" class="form-control"
   No server was created.
 </ng-template>
 <button class="btn btn-primary"
-[disabled]="!allowNewServer"
+        [disabled]="!allowNewServer"
         (click)="onCreateServer()"
->Add Server</button>
+>Add Server
+</button>
 <p>{{ allowNewServer }}</p>
 <p [innerText]="allowNewServer"></p>
 
@@ -30,4 +31,5 @@ type="text" class="form-control"
 <button class="btn btn-primary"
         [disabled]="!username"
         (click)="username = ''"
->Reset user name</button>
+>Reset user name
+</button>
