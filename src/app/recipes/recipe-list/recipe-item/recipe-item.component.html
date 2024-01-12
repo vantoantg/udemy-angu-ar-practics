@@ -1,1 +1,15 @@
-<p>recipe-item works!</p>
+<a href="#" class="list-group-item clearfix"
+(click)="onSelected()">
+  <div class="row">
+    <div class="col-9">
+      <h5>Recipe Name: {{ recipe.name }}</h5>
+      <p>Description: {{ recipe.description }}</p>
+    </div>
+    <div class="col-3 pl-0">
+      <img class="img-reponsive w-100"
+           [src]="recipe.imagePath"
+           style="max-height: 50px"/>
+    </div>
+  </div>
+</a>
+

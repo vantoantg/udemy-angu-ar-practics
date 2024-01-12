@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular-app';
+  leadedFeature = 'recipe';
+
+  onNavigate(feature: string){
+    console.log('listen feature: ' + feature);
+    this.leadedFeature = feature;
+  }
 }
