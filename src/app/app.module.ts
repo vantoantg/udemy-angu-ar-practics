@@ -1,26 +1,23 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import {ServerComponent} from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
-import {WarningAlertComponent} from './warning-alert/warning-alert.component';
-import {FormsModule} from '@angular/forms';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
+import {AccountsService} from './services/accounts.service';
+import {LoggingService} from './services/logging.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent,
-    SuccessAlertComponent,
-    WarningAlertComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
