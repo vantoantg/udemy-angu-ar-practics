@@ -2,6 +2,16 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+      <p appBasicHighlight class="p-3">Style me with basic directive!</p>
+      <p [appBetterHighlight]="'red'" defaultColor="yellow" class="p-3">Style me with better directive!</p>
+      <p *appUnless="true">appUnless testing!</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
       <app-recipes *ngIf="leadedFeature === 'recipe'"></app-recipes>
       <app-shopping-list *ngIf="leadedFeature !== 'recipe'"></app-shopping-list>
     </div>

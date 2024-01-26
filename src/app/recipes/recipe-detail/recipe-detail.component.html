@@ -11,10 +11,17 @@
 
 <div class="row">
   <div class="col-12">
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-      <button type="button" class="btn btn-success">To Shopping List</button>
-      <button type="button" class="btn btn-warning">Edit Recipe</button>
-      <button type="button" class="btn btn-danger">Delete Recipe</button>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      appDropdown
+      >
+        Manage Recipe
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">To Shopping List</a></li>
+        <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+        <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+      </ul>
     </div>
   </div>
 </div>

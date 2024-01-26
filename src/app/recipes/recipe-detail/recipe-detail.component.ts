@@ -8,7 +8,7 @@ import {RecipeModel} from '../recipe.model';
 })
 export class RecipeDetailComponent implements OnInit {
   @Input() recipe: RecipeModel;
-
+  @Input() dropdownToggle = false;
   constructor() {
   }
 
