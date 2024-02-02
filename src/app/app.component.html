@@ -1,13 +1,29 @@
 <div class="container">
   <div class="row">
-    <div class="col-xl-12">
-      <h3>I am in the AppComponent!</h3>
-      <hr>
-      <app-servers></app-servers>
-      <hr>
-      <app-warning-alert></app-warning-alert>
-      <app-success-alert></app-success-alert>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a routerLink="/" class="nav-link"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{exact: true}"
+           id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                role="tab" aria-controls="home" aria-selected="false">Home
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a routerLink="/servers" class="nav-link" routerLinkActive="active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">Servers
+        </a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a [routerLink]="['/users']" class="nav-link" routerLinkActive="active" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                role="tab" aria-controls="contact" aria-selected="false">Users
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
-
