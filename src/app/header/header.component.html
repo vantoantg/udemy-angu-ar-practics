@@ -5,22 +5,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" routerLink="/">Recipe Book</a>
-    <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true"></div>
+    <div class="navbar-collapse"></div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="onSelect('recipe')">Recipes</a>
+          <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/recipes">Recipes</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="onSelect('shipping-list')">Shipping list</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/shopping-list">Shipping list</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          <button class="nav-link dropdown-toggle btn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
              appDropdown
           >
             Manage
-          </a>
+          </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Save Data</a></li>
             <li><a class="dropdown-item" href="#">Fetch Data</a></li>

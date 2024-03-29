@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-.dropdown .dropdown-toggle.show ~ ul.dropdown-menu {
+.dropdown .dropdown-toggle.open ~ ul.dropdown-menu,
+.recipes-dropdown.open > ul.dropdown-menu {
   display: block;
 }
